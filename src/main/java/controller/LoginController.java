@@ -19,7 +19,7 @@ public class LoginController {
  
     @RequestMapping(value="/guest")
     public ModelAndView login(HttpServletRequest request) {
-        // Handle a new guest (if any):
+
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         
@@ -29,6 +29,6 @@ public class LoginController {
             
  
         // Prepare the result view (guest.jsp):
-        return new ModelAndView("login.jsp", "userDao", userDao);
+        return new ModelAndView("index.jsp", "userDao", userDao);
     }
 }
